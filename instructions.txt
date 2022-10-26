@@ -1,0 +1,35 @@
+This repository contains the source code under PyTorch framework for the AAAI Submission ID 7654.
+
+Installation and Usage
+=========================
+1. Install anaconda and create a conda environment with the following packages (some packages maybe installed with pip).
+    1. torch 1.9 (install with CuDNN support)
+    2. torchvision 0.13.0
+    3. matplotlib
+    4. scipy
+    5. numpy
+
+2. All of the datasets used for experiments are publicly available online. Please download them and prepare the dataset as follows.
+    .
+    ├── train
+    │   ├── class1
+    │   │   ├── class1_001.jpg
+    │   │   ├── class1_002.jpg
+    |   |   └── ...
+    │   ├── class2
+    │   ├── class3
+    │   ├── ...
+    │   ├── ...
+    │   └── classN
+    └── val
+        ├── class1
+        │   ├── class1_001.jpg
+        │   ├── class1_002.jpg
+        |   └── ...
+        ├── class2
+        ├── class3
+        ├── ...
+        ├── ...
+        └── classN
+
+3. for finetuning our iSICE model modify the fields in fine-tune.sh script
