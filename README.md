@@ -9,5 +9,38 @@ Our partial correlation based deep visual representation method iSICE is impleme
 
 The following backbones are supported at this moment: AlexNet, VGG-11, VGG-11_BN, VGG-13, VGG-13_BN, VGG16, VGG16_BN, VGG19, VGG19_BN, ResNet-18, ResNet-34, resnet50, ResNet-101, ResNet-152, Inception-V3
 
-Besides the iSICE, we have added the following global representation methods in the repository: Global Average Pooling, iSQRT-COV Pooling, Bilinear Pooling (B-CNN), Compact Bilinear Pooling (CBP), etc.
+Besides iSICE, we have added the following global representation methods in the repository: Global Average Pooling, iSQRT-COV Pooling, Bilinear Pooling (B-CNN), Compact Bilinear Pooling (CBP), etc.
 
+## How to use the code
+
+1. Install anaconda and create a conda environment with the following packages (some packages maybe installed with pip).
+    1. torch 1.9 (install with CuDNN support)
+    2. torchvision 0.13.0
+    3. matplotlib
+    4. scipy
+    5. numpy
+
+2. All of the datasets used for experiments are publicly available online. Please download them and prepare the dataset as follows.
+    .
+    ├── train
+    │   ├── class1
+    │   │   ├── class1_001.jpg
+    │   │   ├── class1_002.jpg
+    |   |   └── ...
+    │   ├── class2
+    │   ├── class3
+    │   ├── ...
+    │   ├── ...
+    │   └── classN
+    └── val
+        ├── class1
+        │   ├── class1_001.jpg
+        │   ├── class1_002.jpg
+        |   └── ...
+        ├── class2
+        ├── class3
+        ├── ...
+        ├── ...
+        └── classN
+
+3. for finetuning our iSICE model modify the fields in fine-tune.sh script
