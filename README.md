@@ -21,6 +21,7 @@ Besides iSICE, we have added the following global representation methods in the 
     5. numpy
 
 2. All of the datasets used for experiments are publicly available online. Please download them and prepare the dataset as follows.
+```
     .
     ├── train
     │   ├── class1
@@ -42,5 +43,6 @@ Besides iSICE, we have added the following global representation methods in the 
         ├── ...
         ├── ...
         └── classN
+```
 
 3. for finetuning our iSICE model modify the fields in fine-tune.sh script
