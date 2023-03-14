@@ -4,7 +4,7 @@
 ![iSICE](isice.png)
 This repository contains the model definitions, training/evaluation code and pre-trained model weights for our paper exploring partial correlation based deep SPD visual representation. More information are available on our project [website](#).
 
-> Learning Partial Correlation based Deep Visual Representation for Image Classification <br>
+> <b>Learning Partial Correlation based Deep Visual Representation for Image Classification</b> <br>
 > [Saimunur Rahman](#), [Piotr Koniusz](http://users.cecs.anu.edu.au/~koniusz), [Lei Wang](https://sites.google.com/view/lei-hs-wang), [Luping Zhou](https://www.sydney.edu.au/engineering/about/our-people/academic-staff/luping-zhou.html), [Peyman Moghadam](https://people.csiro.au/m/p/peyman-moghadam), [Changming Sun](https://vision-cdc.csiro.au/changming.sun)
 
 ## Introduction
