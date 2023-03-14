@@ -16,6 +16,27 @@ This repository contains:
 :heavy_check_mark: A script useful for training/evaluating our method on various datasets<br>
 :heavy_check_mark: Pre-trained model weights on several datasets
 
+## Easy Setup Guide
+To run our code on your machine, the first step would be repository download which can be done using the following command:
+```bash
+git clone 
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Introduction
 The official repository for paper "Learning Partial Correlation based Deep Visual Representation for Image Classification" To appear in 2023 The IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR).
 
