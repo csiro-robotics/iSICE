@@ -45,4 +45,4 @@ Besides iSICE, we have added the following global representation methods in the 
         └── classN
 ```
 
-3. for finetuning our iSICE model modify the fields in fine-tune.sh script
+3. for finetuning our iSICE model modify the fields in train_iSICE_model.sh script
