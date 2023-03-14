@@ -34,6 +34,13 @@ For easiness of use, we only use common python packages so that users can run ou
 
 Note that we have evaluated our code with PyTorch 1.9.0. However, there should not be problem with other versions released after PyTorch 0.4.0. The above command will provide GPU support via CUDA which supports CPU by default.
 
+The third step is to activate the above conda enovironment with the following command:
+
+```bash
+conda activate iSICE
+```
+
+
 
 
 
