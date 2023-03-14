@@ -59,10 +59,9 @@ We use a modular design for this repository. From our experience, we find that s
 │   ├── representation
 │   │   ├── __init__.py
 │   │   ├── SICE.py
-│   │   ├── MPNCOV.py
+│   │   ├── INVCOV.py
+│   │   ├── COV.py
 │   │   ├── GAvP.py
-│   │   ├── BCNN.py
-│   │   ├── CBP.py
 ├── train_iSICE_model.sh
 ```
 
