@@ -27,12 +27,12 @@ The second step is to create a conda enovironment with necessary python packages
 
 ```bash
 conda create -name iSICE
-conda install pytorch==1.9.0 torchvision cudatoolkit torchaudio scipy matplotlib -c pytorch
+conda install pytorch torchvision cudatoolkit torchaudio scipy matplotlib -c pytorch
 ```
 
 For easiness of use, we only use common python packages so that users can run our code with less difficulty. If you do not have anaconda installed, you can either install anaconda or its lighter version miniconda, or use python virtual environment. In case of python virtual environment, the packages can be installed with `pip`. Please see [here](https://pip.pypa.io/en/stable/cli/pip_install) for details.
 
-
+Note that we have evaluated our code with PyTorch 1.9.0. However, there should not be problem with other versions released after PyTorch 0.4.0.
 
 
 
