@@ -63,7 +63,7 @@ We use a modular design for this repository. From our experience, we find that s
 │   │   ├── GAvP.py
 │   │   ├── BCNN.py
 │   │   ├── CBP.py
-├── main.py
+├── train_iSICE_model.sh
 ```
 
 
