@@ -40,7 +40,8 @@ The third step is to activate the above conda enovironment with the following co
 conda activate iSICE
 ```
 
-
+## Repository Overview
+We use a modular design for this repository for its long-term use and easy extensions. 
 
 
 
