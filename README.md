@@ -12,9 +12,9 @@ Visual representation based on covariance matrix has demonstrates its efficacy f
 
 This repository contains:
 
-- A simple implementation of our method with PyTorch
-- A script useful for training/evaluating our method on various datasets
-- Pre-trained model weights on several datasets
+:heavy_check_mark: A simple implementation of our method with PyTorch
+:heavy_check_mark: A script useful for training/evaluating our method on various datasets
+:heavy_check_mark: Pre-trained model weights on several datasets
 
 ## Introduction
 The official repository for paper "Learning Partial Correlation based Deep Visual Representation for Image Classification" To appear in 2023 The IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR).
