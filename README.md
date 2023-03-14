@@ -1,6 +1,6 @@
 ## Partial Correlation based Deep Visual Representation<br><sub>Official implementation with PyTorch</sub>
 
-## ![Paper](#) | ![Project Website](#) 
+### ![Paper](#) | ![Project Website](#) 
 ![iSICE](isice.png)
 This repository contains the model definitions, training/evaluation code and pre-trained model weights for our paper Learning Partial Correlation based Deep Visual Representation. More information are available on our project [website](#).
 
