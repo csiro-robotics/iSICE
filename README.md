@@ -12,8 +12,8 @@ Visual representation based on covariance matrix has demonstrates its efficacy f
 
 This repository contains:
 
-:heavy_check_mark: A simple implementation of our method with PyTorch
-:heavy_check_mark: A script useful for training/evaluating our method on various datasets
+:heavy_check_mark: A simple implementation of our method with PyTorch<br>
+:heavy_check_mark: A script useful for training/evaluating our method on various datasets<br>
 :heavy_check_mark: Pre-trained model weights on several datasets
 
 ## Introduction
