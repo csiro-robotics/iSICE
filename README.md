@@ -41,7 +41,7 @@ conda activate iSICE
 ```
 
 ## Repository Overview
-We use a modular design for this repository. From our experience, we find that such design is easy to manage and extend. Our code is segmented as follows.
+We use a modular design for this repository. From our experience, we find that such design is easy to manage and extend. Our code repository is segmented as follows.
 
 ```bash
 ├── main.py
