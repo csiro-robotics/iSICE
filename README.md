@@ -41,7 +41,30 @@ conda activate iSICE
 ```
 
 ## Repository Overview
-We use a modular design for this repository for its long-term use and easy extensions. 
+We use a modular design for this repository. From our experience, we find that such design is easy to manage and extend. Our code is segmented as follows.
+
+```bash
+├── main.py
+├── imagepreprocess.py
+├── functions.py
+├── model_init.py
+├── src
+│   ├── network
+│   │   ├── __init__.py
+│   │   ├── base.py
+│   │   ├── inception.py
+│   │   ├── alexnet.py
+│   │   ├── resnet.py
+│   │   └── vgg.py
+│   ├── representation
+│   │   ├── __init__.py
+│   │   ├── SICE.py
+│   │   ├── MPNCOV.py
+│   │   ├── GAvP.py
+│   │   ├── BCNN.py
+│   │   ├── CBP.py
+├── main.py
+```
 
 
 
