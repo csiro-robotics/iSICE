@@ -23,7 +23,14 @@ cd /the/path/where/you/want/to/copy/the/code
 git clone https://github.com/csiro-robotics/iSICE.git
 cd iSICE
 ```
+The second step is to create a conda enovironment with necessary python packages which can be done using the following commands:
 
+```bash
+conda create -name iSICE
+conda install pytorch==1.9.0 torchvision cudatoolkit torchaudio scipy matplotlib -c pytorch
+```
+
+For easiness of use, we only use common python packages so that users can run our code with less difficulty. If you do not have anaconda installed, you can either install anaconda or its lighter version miniconda, or use python virtual environment. In case of python virtual environment, the packages can be installed with `pip`. Please see [here](https://pip.pypa.io/en/stable/cli/pip_install) for details.
 
 
 
