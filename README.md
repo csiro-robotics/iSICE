@@ -13,7 +13,7 @@ Besides iSICE, we have added the following global representation methods in the 
 
 ## How to use the code
 
-# Requirements
+### Requirements
 1. Install anaconda and create a conda environment with the following packages (some packages maybe installed with pip).
     1. torch 1.9 (install with CuDNN support)
     2. torchvision 0.13.0
