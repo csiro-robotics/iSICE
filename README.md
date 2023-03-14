@@ -19,8 +19,9 @@ This repository contains:
 ## Easy Setup Guide
 To run our code on your machine, the first step would be repository download which can be done using the following command:
 ```bash
-git clone 
-'''
+git clone https://github.com/csiro-robotics/iSICE.git
+cd iSICE
+```
 
 
 
