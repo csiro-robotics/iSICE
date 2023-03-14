@@ -2,7 +2,10 @@
 
 ## ![Paper](#) | ![Project Website](#) 
 ![iSICE](isice.png)
-This repository contains the model definitions, training/evaluation code and pre-trained model weights for our paper Learning Partial Correlation based Deep Visual Representation. More information are available on our project website.
+This repository contains the model definitions, training/evaluation code and pre-trained model weights for our paper Learning Partial Correlation based Deep Visual Representation. More information are available on our project [website](#).
+
+> Learning Partial Correlation based Deep Visual Representation for Image Classification <br>
+> [Saimunur Rahman](#), [Piotr Koniusz](#)
 
 ## Introduction
 The official repository for paper "Learning Partial Correlation based Deep Visual Representation for Image Classification" To appear in 2023 The IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR).
