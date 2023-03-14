@@ -65,7 +65,8 @@ We use a modular design for this repository. From our experience, we find that s
 ├── train_iSICE_model.sh
 ```
 
-
+## How to use our code
+Our `main.py` contains the set
 
 
 
