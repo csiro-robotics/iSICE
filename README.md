@@ -107,16 +107,24 @@ For convanience, we provide our VGG-16 and ResNet-50 based partial correlation m
 <table>
 <thead>
   <tr>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Backbone</th>
+    <th>MIT</th>
+    <th>Airplane</th>
+    <th>Birds</th>
+    <th>Cars</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>VGG-16</td>
+    <td>top1 accuracy</td>
+    <td>Model</td>
+    <td>top1 accuracy</td>
+    <td>Model</td>
+    <td>top1 accuracy</td>
+    <td>Model</td>
+    <td>top1 accuracy</td>
+    <td>Model</td>
   </tr>
   <tr>
     <td></td>
