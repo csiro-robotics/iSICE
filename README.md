@@ -92,13 +92,13 @@ We use a modular design for this repository. From our experience, we find that s
 ```
 
 ## How to use our code
-Our `main.py` maintains the process of running our code to reproduce the results reported in the paper. Supppose, we want to train a partial correlation representation model based on VGG-16 backbone with CUB-200 dataset (referred as Brids dataset in the paper), the following command can be used:
+Our `main.py` maintains the process of running our code to reproduce the results reported in the paper. Supppose, we want to train a partial correlation representation model based on VGG-16 backbone with CUB-200 dataset (referred as Birds dataset in the paper) and evaluate on the same dataset, the following command can be used:
 
 ```bash
 python main.py /path/to/CUB --benchmark CUB --pretrained -a vgg16_bn --epochs 100 --lr 1.2e-4 --lr-method step --lr-params 15\ 30 -j 10 -b 65 --num-classes 200 --representation SICE --freezed-layer 0 --classifier-factor 5 --modeldir /path/to/save/the/model/and/meta/information
 ```
 
-
+As training progresses, the following information will be automatically saved in the path specified with `--modeldir` parameter above: loss, top-1 error and top-5 error
 
 
 
