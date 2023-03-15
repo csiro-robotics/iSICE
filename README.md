@@ -166,7 +166,7 @@ For convanience, we provide our VGG-16 and ResNet-50 based partial correlation m
 </thead>
 <tbody>
   <tr>
-    <td rowspan="2">VGG-16</td>
+    <td></td>
     <td>top1 acc. (%)</td>
     <td>Model</td>
     <td>top1 acc. (%)</td>
@@ -177,6 +177,7 @@ For convanience, we provide our VGG-16 and ResNet-50 based partial correlation m
     <td>Model</td>
   </tr>
   <tr>
+    <td>VGG-16</td>
     <td>76.1</td>
     <td>TBA</td>
     <td>90.0</td>
