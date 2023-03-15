@@ -176,24 +176,24 @@ For convanience, we provide our VGG-16 and ResNet-50 based partial correlation m
   </tr>
   <tr>
     <td>VGG-16</td>
-    <td>76.1</td>
+    <td>80.2 </td>
     <td>TBA</td>
-    <td>90.0</td>
+    <td>89.4 </td>
     <td>TBA</td>
-    <td>84.5</td>
+    <td>83.4 </td>
     <td>TBA</td>
-    <td>91.2</td>
+    <td>92.0</td>
     <td>TBA</td>
   </tr>
   <tr>
     <td>ResNet-50</td>
-    <td>78.8 </td>
+    <td>80.8  </td>
     <td>TBA</td>
-    <td>90.9</td>
+    <td>91.2  </td>
     <td>TBA</td>
-    <td>84.3</td>
+    <td>84.7  </td>
     <td>TBA</td>
-    <td>92.1</td>
+    <td>92.0</td>
     <td>TBA</td>
   </tr>
 </tbody>
