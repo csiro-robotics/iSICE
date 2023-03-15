@@ -117,13 +117,13 @@ For convanience, we provide our VGG-16 and ResNet-50 based partial correlation m
 <tbody>
   <tr>
     <td rowspan="2">VGG-16</td>
-    <td>top1 accuracy</td>
+    <td>top1 accuracy (%)</td>
     <td>Model</td>
-    <td>top1 accuracy</td>
+    <td>top1 accuracy (%)</td>
     <td>Model</td>
-    <td>top1 accuracy</td>
+    <td>top1 accuracy (%)</td>
     <td>Model</td>
-    <td>top1 accuracy</td>
+    <td>top1 accuracy (%)</td>
     <td>Model</td>
   </tr>
   <tr>
