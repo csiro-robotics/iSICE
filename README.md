@@ -103,6 +103,42 @@ As training progresses, loss, top-1 error and top-5 error information for both t
 ## Pre-trained models
 For convanience, we provide our VGG-16 and ResNet-50 based partial correlation models on traned on fine-grained and scene datasets. They can be downloaded here.
 
+#### Pairwise correlation based models (computed via iSQRT-COV pooling)
+<table>
+<thead>
+  <tr>
+    <th>Backbone</th>
+    <th colspan="2"><a href="https://web.mit.edu/torralba/www/indoor.html">MIT</a></th>
+    <th colspan="2"><a href="https://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/">Airplane</a></th>
+    <th colspan="2"><a href="http://www.vision.caltech.edu/datasets/cub_200_2011/">Birds</a></th>
+    <th colspan="2"><a href="http://ai.stanford.edu/~jkrause/cars/car_dataset.html">Cars</a></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="2">VGG-16</td>
+    <td>top1 acc. (%)</td>
+    <td>Model</td>
+    <td>top1 acc. (%)</td>
+    <td>Model</td>
+    <td>top1 acc. (%)</td>
+    <td>Model</td>
+    <td>top1 acc. (%)</td>
+    <td>Model</td>
+  </tr>
+  <tr>
+    <td>76.1</td>
+    <td>TBA</td>
+    <td>90.0</td>
+    <td>TBA</td>
+    <td>84.5</td>
+    <td>TBA</td>
+    <td>91.2</td>
+    <td>TBA</td>
+  </tr>
+</tbody>
+</table>
+
 #### Covariance representation models
 <table>
 <thead>
