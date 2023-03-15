@@ -187,6 +187,17 @@ For convanience, we provide our VGG-16 and ResNet-50 based partial correlation m
     <td>91.2</td>
     <td>TBA</td>
   </tr>
+  <tr>
+    <td>VGG-16</td>
+    <td>76.1</td>
+    <td>TBA</td>
+    <td>90.0</td>
+    <td>TBA</td>
+    <td>84.5</td>
+    <td>TBA</td>
+    <td>91.2</td>
+    <td>TBA</td>
+  </tr>
 </tbody>
 </table>
 
