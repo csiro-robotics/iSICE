@@ -199,7 +199,53 @@ For convanience, we provide our VGG-16 and ResNet-50 based partial correlation m
 </tbody>
 </table>
 
-
+#### Partial correlation based models (computed via iSICE described in Algorithm 2 of the paper)
+<table>
+<thead>
+  <tr>
+    <th></th>
+    <th colspan="2"><a href="https://web.mit.edu/torralba/www/indoor.html">MIT</a></th>
+    <th colspan="2"><a href="https://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/">Airplane</a></th>
+    <th colspan="2"><a href="http://www.vision.caltech.edu/datasets/cub_200_2011/">Birds</a></th>
+    <th colspan="2"><a href="http://ai.stanford.edu/~jkrause/cars/car_dataset.html">Cars</a></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Backbone</td>
+    <td>top1 acc. (%)</td>
+    <td>Model</td>
+    <td>top1 acc. (%)</td>
+    <td>Model</td>
+    <td>top1 acc. (%)</td>
+    <td>Model</td>
+    <td>top1 acc. (%)</td>
+    <td>Model</td>
+  </tr>
+  <tr>
+    <td>VGG-16</td>
+    <td>78.7  </td>
+    <td>TBA</td>
+    <td>92.2  </td>
+    <td>TBA</td>
+    <td>86.5  </td>
+    <td>TBA</td>
+    <td>94.0</td>
+    <td>TBA</td>
+  </tr>
+  <tr>
+    <td>ResNet-50</td>
+    <td>80.5  </td>
+    <td>TBA</td>
+    <td>92.7   </td>
+    <td>TBA</td>
+    <td>85.9   </td>
+    <td>TBA</td>
+    <td>93.5</td>
+    <td>TBA</td>
+  </tr>
+</tbody>
+</table>
 
 
 
