@@ -66,7 +66,7 @@ We use a modular design for this repository. From our experience, we find that s
 ```
 
 ## How to use our code
-Our `main.py` contains the set
+Our `main.py` maintains the process of running our code to reproduce the results produced in the paper. 
 
 
 
