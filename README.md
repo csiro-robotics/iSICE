@@ -157,7 +157,7 @@ For convanience, we provide our VGG-16 and ResNet-50 based partial correlation m
 <table>
 <thead>
   <tr>
-    <th>Backbone</th>
+    <th></th>
     <th colspan="2"><a href="https://web.mit.edu/torralba/www/indoor.html">MIT</a></th>
     <th colspan="2"><a href="https://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/">Airplane</a></th>
     <th colspan="2"><a href="http://www.vision.caltech.edu/datasets/cub_200_2011/">Birds</a></th>
@@ -166,7 +166,7 @@ For convanience, we provide our VGG-16 and ResNet-50 based partial correlation m
 </thead>
 <tbody>
   <tr>
-    <td></td>
+    <td>Backbone</td>
     <td>top1 acc. (%)</td>
     <td>Model</td>
     <td>top1 acc. (%)</td>
