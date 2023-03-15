@@ -100,6 +100,8 @@ python main.py /path/to/CUB --benchmark CUB --pretrained -a vgg16_bn --epochs 10
 
 As training progresses, loss, top-1 error and top-5 error information for both training and test evaluation will be automatically saved in the path specified with `--modeldir` parameter above.
 
+For training on computing clusters such as HPC please use the `train_iSICE_model.sh` script by changing it various fields as per the given instructions on the script. Our code is compatible with multiple GPU training.
+
 ## Pre-trained models
 For convanience, we provide our VGG-16 and ResNet-50 based partial correlation models on traned on fine-grained and scene datasets. They can be downloaded here.
 
