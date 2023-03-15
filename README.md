@@ -264,10 +264,12 @@ Please use the following bibtex reference to cite our paper.
     booktitle = {IEEE/CVF Int. Conf. on Computer Vision and Pattern Recognition (CVPR)},
     month = {June},
     year = {2023}
-     }
+}
 ```
 
+## Acknowledgments
 
+This codebase borrows from [iSQRT-COV](https://github.com/jiangtaoxie/fast-MPN-COV), we thank the authors.
 
 
 
