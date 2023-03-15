@@ -101,7 +101,11 @@ python main.py /path/to/CUB --benchmark CUB --pretrained -a vgg16_bn --epochs 10
 As training progresses, loss, top-1 error and top-5 error information for both training and test evaluation will be automatically saved in the path specified with `--modeldir` parameter above.
 
 ## Pre-trained models
-For convanience, we provide VGG-16 and ResNet-50 based pre-trained models trained on fine-grained datasets.
+For convanience, we provide our VGG-16 and ResNet-50 based partial correlation models on traned on fine-grained and scene datasets. They can be downloaded here.
+
+### Models baed on VGG-16
+| Backbone | Representation| MIT | Airplane | Birds | Cars
+--- | --- |--- | --- |--- | --- |
 
 
 
