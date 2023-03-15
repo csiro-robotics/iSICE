@@ -16,7 +16,7 @@ This repository contains:
 :heavy_check_mark: A script useful for training/evaluating our method on various datasets<br>
 :heavy_check_mark: Pre-trained model weights on several datasets
 
-## Easy Setup Guide
+## Repository Setup Guide
 To run our code on your machine, the first step would be repository download which can be done using the following commands:
 ```bash
 cd /the/path/where/you/want/to/copy/the/code
