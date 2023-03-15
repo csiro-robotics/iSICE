@@ -255,6 +255,18 @@ Pre-trained models canbe used as a checkpoints for further training/evaluation u
 python main.py /path/to/CUB --benchmark CUB --pretrained -a vgg16_bn --epochs 100 --lr 1.2e-4 --lr-method step --lr-params 15\ 30 -j 10 -b 65 --num-classes 200 --representation SICE --freezed-layer 0 --classifier-factor 5 --resume /path/to/downloaded/model
 ```
 
+##BibLaTex
+Please use the following bibtex reference to cite our paper.
+```bash
+@InProceedings{isice_cvpr,
+           author = {Rahman, Saimunur and Koniusz, Piotr and Wang, Lei and Zhou, Luping and Moghadam, Peyman and Sun, Changming},
+           title = {Learning Partial Correlation based Deep Visual Representation for Image Classification},
+           booktitle = {IEEE/CVF Int. Conf. on Computer Vision and Pattern Recognition (CVPR)},
+           month = {June},
+           year = {2023}
+     }
+```
+
 
 
 
