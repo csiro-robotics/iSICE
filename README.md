@@ -104,7 +104,7 @@ As training progresses, loss, top-1 error and top-5 error information for both t
 For convanience, we provide our VGG-16 and ResNet-50 based partial correlation models on traned on fine-grained and scene datasets. They can be downloaded here.
 
 #### Covariance representation models
-Backbone| MIT | Airplane || Birds || Cars
+Backbone| MIT || Airplane || Birds || Cars
 VGG-16 | top1 | Model | top1 | Model | top1 | Model 
 --- | --- |--- | --- |--- |
 
