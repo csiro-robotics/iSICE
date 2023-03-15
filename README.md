@@ -109,9 +109,9 @@ For convanience, we provide our VGG-16 and ResNet-50 based partial correlation m
   <tr>
     <th>Backbone</th>
     <th colspan="2"><a href="https://web.mit.edu/torralba/www/indoor.html">MIT</a></th>
-    <th colspan="2"><a href="">Airplane</a></th>
-    <th colspan="2"><a href="">Birds</a></th>
-    <th colspan="2"><a href="">Cars</a></th>
+    <th colspan="2"><a href="https://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/">Airplane</a></th>
+    <th colspan="2"><a href="http://www.vision.caltech.edu/datasets/cub_200_2011/">Birds</a></th>
+    <th colspan="2"><a href="http://ai.stanford.edu/~jkrause/cars/car_dataset.html">Cars</a></th>
   </tr>
 </thead>
 <tbody>
@@ -127,9 +127,10 @@ For convanience, we provide our VGG-16 and ResNet-50 based partial correlation m
     <td>Model</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>76.1</td>
+    <td>90.0</td>
+    <td>84.5</td>
+    <td>91.2</td>
   </tr>
 </tbody>
 </table>
