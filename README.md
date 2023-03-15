@@ -109,9 +109,9 @@ For convanience, we provide our VGG-16 and ResNet-50 based partial correlation m
   <tr>
     <th>Backbone</th>
     <th colspan="2"><a href="https://web.mit.edu/torralba/www/indoor.html">MIT</a></th>
-    <th colspan="2">Airplane</th>
-    <th colspan="2">Birds</th>
-    <th colspan="2">Cars</th>
+    <th colspan="2"><a href="">Airplane</a></th>
+    <th colspan="2"><a href="">Birds</a></th>
+    <th colspan="2"><a href="">Cars</a></th>
   </tr>
 </thead>
 <tbody>
