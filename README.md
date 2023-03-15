@@ -137,6 +137,8 @@ For convanience, we provide our VGG-16 and ResNet-50 based partial correlation m
     <td>91.2</td>
     <td>TBA</td>
   </tr>
+</tbody>
+<tbody>
   <tr>
     <td rowspan="2">ResNet-50</td>
     <td>76.1</td>
