@@ -108,10 +108,10 @@ For convanience, we provide our VGG-16 and ResNet-50 based partial correlation m
 <thead>
   <tr>
     <th>Backbone</th>
-    <th>MIT</th>
-    <th>Airplane</th>
-    <th>Birds</th>
-    <th>Cars</th>
+    <th colspan="2">MIT</th>
+    <th colspan="2">Airplane</th>
+    <th colspan="2">Birds</th>
+    <th colspan="2">Cars</th>
   </tr>
 </thead>
 <tbody>
