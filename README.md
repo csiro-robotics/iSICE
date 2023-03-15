@@ -257,7 +257,7 @@ python main.py /path/to/CUB --benchmark CUB --pretrained -a vgg16_bn --epochs 10
 
 ## How to cite our paper
 Please use the following bibtex reference to cite our paper.
-```bash
+```bibtex
 @InProceedings{isice_cvpr,
     author = {Rahman, Saimunur and Koniusz, Piotr and Wang, Lei and Zhou, Luping and Moghadam, Peyman and Sun, Changming},
     title = {Learning Partial Correlation based Deep Visual Representation for Image Classification},
