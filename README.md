@@ -40,6 +40,32 @@ The third step is to activate the above conda enovironment with the following co
 conda activate iSICE
 ```
 
+The forth step will be downloading the datasets. All datasets should be prepared as follows.
+
+```bash
+.
+├── train
+│   ├── class1
+│   │   ├── class1_001.jpg
+│   │   ├── class1_002.jpg
+|   |   └── ...
+│   ├── class2
+│   ├── class3
+│   ├── ...
+│   ├── ...
+│   └── classN
+└── val
+    ├── class1
+    │   ├── class1_001.jpg
+    │   ├── class1_002.jpg
+    |   └── ...
+    ├── class2
+    ├── class3
+    ├── ...
+    ├── ...
+    └── classN
+```
+
 ## Repository Overview
 We use a modular design for this repository. From our experience, we find that such design is easy to manage and extend. Our code repository is segmented as follows.
 
