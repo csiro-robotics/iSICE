@@ -45,25 +45,25 @@ The forth step will be downloading the datasets. All datasets should be prepared
 ```bash
 .
 ├── train
-│   ├── class1
-│   │   ├── class1_001.jpg
-│   │   ├── class1_002.jpg
+│   ├── class 1
+│   │   ├── image_001.format
+│   │   ├── image_002.format
 |   |   └── ...
-│   ├── class2
-│   ├── class3
+│   ├── class 2
+│   ├── class 3
 │   ├── ...
 │   ├── ...
-│   └── classN
+│   └── class N
 └── val
-    ├── class1
-    │   ├── class1_001.jpg
-    │   ├── class1_002.jpg
+    ├── class 1
+    │   ├── image_001.format
+    │   ├── image_002.format
     |   └── ...
-    ├── class2
-    ├── class3
+    ├── class 2
+    ├── class 3
     ├── ...
     ├── ...
-    └── classN
+    └── class N
 ```
 
 ## Repository Overview
