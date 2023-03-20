@@ -272,5 +272,5 @@ Please use the following bibtex reference to cite our paper.
 This codebase borrows from [iSQRT-COV repository](https://github.com/jiangtaoxie/fast-MPN-COV), we thank the authors for maintaining the repository.
 
 ## Contact
-If you have any questions or suggestions, please contact `saimun.rahman@data61.csiro.au` before opening an issue.
+If you have any questions or suggestions, please contact `saimun.rahman@data61.csiro.au`.
 
