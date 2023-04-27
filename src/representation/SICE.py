@@ -65,7 +65,7 @@ class SICE(nn.Module):
          y = ZY * torch.sqrt(normA).view(batchSize, 1, 1).expand_as(x)
          return y
      
-     def _sice_full(self, mfX, fLR=5.0, fSparsity=0.07, nSteps=10000):
+     def _sice(self, mfX, fLR=5.0, fSparsity=0.07, nSteps=10000):
          mfC = self._cov_pool(mfX)
          mfC=mfC/torch.diagonal(mfC, dim1=-2, dim2=-1).sum(-1).view(-1,1,1)
          I = 1e-10+1e-9*torch.diag(torch.rand(mfC.shape[1],device = mfC.device)).view(1, mfC.shape[1], mfC.shape[2]).repeat(mfC.shape[0],1,1).type(mfC.dtype)
@@ -82,41 +82,36 @@ class SICE(nn.Module):
          
          nCounter=0
          for i in range(nSteps):
-             mfLLT_plus=torch.relu(mfLLT)
-             mfLLT_minus=torch.relu(-mfLLT)
-             while True:
-                 try:
-                     zz=self._inv_sqrtm(mfLLT+I, 7) 
-                     mfGradPart1=-zz.bmm(zz)
-                 except:
-                     mfLLT=mfLLT+I
-                 else:
-                     break
+             mfLLT_plus = torch.relu(mfLLT)
+             mfLLT_minus = torch.relu(-mfLLT)
+         
+             zz = self._inv_sqrtm(mfLLT+I, 7)
+             mfGradPart1=-zz.bmm(zz)
             
-             mfGradPart2=0.5*( mfCov.transpose(1,2) + mfCov )
-             mfGradPart12=mfGradPart1+mfGradPart2
+             mfGradPart2 = 0.5*(mfCov.transpose(1,2) + mfCov)
+             mfGradPart12 = mfGradPart1+mfGradPart2
             
-             mfGradPart3_plus=mfGradPart12 + fSparsity
-             mfGradPart3_minus=-mfGradPart12 + fSparsity
+             mfGradPart3_plus = mfGradPart12 + fSparsity
+             mfGradPart3_minus = -mfGradPart12 + fSparsity
             
              fDec=(1-i/(nSteps-1.0) )
             
-             mfLLT_plus=mfLLT_plus - fLR*fDec*mfGradPart3_plus
-             mfLLT_minus=mfLLT_minus - fLR*fDec*mfGradPart3_minus
+             mfLLT_plus = mfLLT_plus - fLR*fDec*mfGradPart3_plus
+             mfLLT_minus = mfLLT_minus - fLR*fDec*mfGradPart3_minus
             
-             mfLLT_plus=torch.relu(mfLLT_plus)
-             mfLLT_minus=torch.relu(mfLLT_minus)
+             mfLLT_plus = torch.relu(mfLLT_plus)
+             mfLLT_minus = torch.relu(mfLLT_minus)
             
-             mfLLT=mfLLT_plus-mfLLT_minus 
-             mfLLT=0.5*(mfLLT+mfLLT.transpose(1,2))
+             mfLLT = mfLLT_plus-mfLLT_minus 
+             mfLLT = 0.5*(mfLLT+mfLLT.transpose(1,2))
             
-             fSolDiff=(mfLLT-mfLLT_prev).abs().mean()
-             fSparseCount=((mfLLT.abs()>2e-8)*1.0).mean()
+             fSolDiff = (mfLLT-mfLLT_prev).abs().mean()
+             fSparseCount = ((mfLLT.abs()>2e-8)*1.0).mean()
 
-             mfLLT_prev=mfLLT*1.0
-             mfLLT_prev=mfLLT_prev
-         mfOut=mfLLT
-         mfOut = mfOut/torch.diagonal(self._cov_pool(mfX), dim1=-2, dim2=-1).sum(-1).view(-1,1,1) 
+             mfLLT_prev = mfLLT*1.0
+             mfLLT_prev = mfLLT_prev
+         mfOut = mfLLT
+         mfOut = mfOut/torch.diagonal(mfOut, dim1=-2, dim2=-1).sum(-1).view(-1,1,1) 
          return mfOut
     
      def _triuvec(self, x):
@@ -126,7 +121,7 @@ class SICE(nn.Module):
      def forward(self, x):
          if self.dr is not None:
              x = self.conv_dr_block(x)
-         x = self._sice_full(x, fLR=self.learingRate, fSparsity=self.sparsity, nSteps=self.iterNum)
+         x = self._sice(x, fLR=self.learingRate, fSparsity=self.sparsity, nSteps=self.iterNum)
          if self.is_vec:
              x = self._triuvec(x)
          return x
