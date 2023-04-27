@@ -1,4 +1,7 @@
-# Learning Partial Correlation based Deep Visual Representation for Visual Classification, To be appeared in CVPR 2023
+# Learning Partial Correlation based Deep Visual Representation for Visual Classification
+
+### Saimunur Rahman, Piotr Koniusz, Lei Wang, Luping Zhou, Peyman Moghadam, Changming Sun
+### CSIRO Data61, University of Wollongong, University of Sydney
 
 ## Introduction
 The official repository for paper "Learning Partial Correlation based Deep Visual Representation for Image Classification" To appear in 2023 The IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR).
