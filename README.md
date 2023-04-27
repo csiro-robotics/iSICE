@@ -1,4 +1,4 @@
-## Partial Correlation based Deep Visual Representation<br><sub>Official implementation with PyTorch</sub>
+## Learning Partial Correlation based Deep Visual Representation for Image Classification<br><sub>Official implementation with PyTorch</sub>
 
 ### ![Paper](#) | ![Project Website](#) 
 ![iSICE](isice.png)
