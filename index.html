@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Learning Partial Correlation based Deep Visual Representation for Image Classification -- CVPR 2023</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index_files/bootstrap.css">
+    <link rel="stylesheet" href="index_files/bootstrap-icons.css">
+    <link rel="stylesheet" href="index_files/prism-okaidia.css">
+    <link rel="stylesheet" href="index_files/custom.min.css">
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async="" src="index_files/google-analytics_analytics.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-23019901-1');
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript"
+      src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+  </head>
+  <body data-new-gr-c-s-check-loaded="8.905.0" data-gr-ext-installed="">
+    <div class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+      <div class="container">
+        <a href="https://bootswatch.com/" class="navbar-brand">iSICE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Summary</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Framework</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-md-auto">
+            <li class="nav-item">
+              <a target="_blank" rel="noopener" class="nav-link" href="#">CVPR'23</a>
+            </li>
+            <li class="nav-item">
+              <a target="_blank" rel="noopener" class="nav-link" href="#">CSIRO Data61</a>
+            </li>
+            <li class="nav-item">
+              <a target="_blank" rel="noopener" class="nav-link" href="#">UOW</a>
+            </li>
+            <li class="nav-item">
+              <a target="_blank" rel="noopener" class="nav-link" href="#">ANU</a>
+            </li>
+            <li class="nav-item">
+              <a target="_blank" rel="noopener" class="nav-link" href="#">USYD</a>
+            </li>
+            <li class="nav-item">
+              <a target="_blank" rel="noopener" class="nav-link" href="#">QUT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div class="col-lg-12 col-md-11 col-sm-10" align="center">
+            <h1>Learning Partial Correlation based Deep Visual Representation<br/> for Image Classification </h1>
+            <p class="lead"><br/>Saimunur Rahman<sup>1,2</sup>, Piotr Koniusz<sup>1,3</sup>, Lei Wang<sup>2</sup>, Luping Zhou<sup>4</sup>, Peyman Moghadam<sup>1,5</sup>, Changming Sun<sup>1</sup><br/>
+              <sup>1</sup>CSIRO Data61, <sup>2</sup>University of Wollongong, <sup>3</sup>Australian National University, <sup>4</sup>University of Sydney, <sup>5</sup>Queensland University of Technology<br/>
+            Australia</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="bs-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12 col-md-11 col-sm-10">
+            <embed src="partial_correction.svg" width="65%" alt="image load failed!" style="display: block; margin: 0 auto;"/> <br/>
+            <p style="text-align: center; padding-left: 5%; padding-right: 5%" class="text-info">Understanding the partial correlation (a  3D toy case). Unlike the ordinary covariance (pairwise correlation of say $\mathbf{x}$ and $\mathbf{y}$ corresponding to channels), partial correlation between variables $\mathbf{x}$ and $\mathbf{y}$  removes the influence of the confounding variable $\mathbf{z}$. Let the number of samples  $n\!=\!3$ and channels $d\!=\!3$. For the 3D case,  $\mathbf{x}$ and $\mathbf{y}$ are projected onto a plane perpendicular to $\mathbf{z}$. Then $\rho_{xy}\!=\!\cos{\varphi_{xy}}$ (and $\rho_{xz}$ and $\rho_{yz}$ can be computed by analogy). Projected ''residuals''' $\mathbf{r}_\mathbf{x}$ and $\mathbf{r}_\mathbf{y}$ are computed as indicated in the plot,   ${\mathbf{w}'\!}_x\!=\!\arg min\!_{\mathbf{w}}\!\sum_{i=1}^3(x_i\!-\!\mathbf{w}_x^\top\mathbf{z}_i)$ where $\mathbf{z}_i\!=\![z_i, 1]^\top$ (and ${\mathbf{w}'\!}_y$ is computed by analogy). The green box: for $d\!>\!3$, the computation of partial correlation requires covariance inversion.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-11 col-sm-10">
+            <div class="page-header">
+              <h1 id="tables">Proposed idea</h1>
+              <p class="lead">Visual representation based on covariance matrix has demonstrates its efficacy for image classification by characterising the pairwise correlation of different channels in convolutional feature maps. However, pairwise correlation will become misleading once there is another channel correlating with both channels of interest, resulting in the "confounding'' effect. For this case, "partial correlation'' which removes the confounding effect shall be estimated instead. Nevertheless, reliably estimating partial correlation requires to solve a symmetric positive definite matrix optimisation, known as sparse inverse covariance estimation (SICE). How to incorporate this process into CNN remains an open issue. In this work, we formulate SICE as a novel structured layer of CNN. To ensure end-to-end trainability, we develop an iterative method to solve the above matrix optimisation during forward and backward propagation steps. Our work obtains a partial correlation based deep visual representation and mitigates the small sample problem  often encountered by covariance matrix estimation in CNN. Computationally, our model can be effectively trained with GPU and works well with a large number of channels of advanced CNNs. Experiments show the efficacy and  superior classification performance of our deep visual representation compared to covariance matrix based counterparts.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-11 col-sm-10">
+            <div class="page-header">
+              <h1 id="tables">Proposed framework</h1>
+            </div>
+            <embed src="isice.svg" width="100%" alt="image load failed!" style="display: block; margin: 0 auto;"/> <br/>
+            <p style="text-align: center;" class="text-info">Proposed iterative sparse inverse covariance estimation (iSICE) method in a CNN pipeline.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-11 col-sm-10">
+            <div class="page-header">
+              <h1 id="tables">Proposed iSICE algorithm</h1>
+            </div>
+            <embed src="algorithm.svg" width="100%" alt="image load failed!" style="display: block; margin: 0 auto;"/> <br/>
+            <p style="text-align: center;" class="text-info">For explanation of notations and Algirithm 1, please read the paper.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-11 col-sm-10">
+            <div class="page-header">
+              <h1 id="tables">Experimental results</h1>
+            </div>
+            <embed src="results.svg" width="100%" alt="image load failed!" style="display: block; margin: 0 auto;"/> <br/>
+            <p style="text-align: center;" class="text-info">For explanation of notations and Algirithm 1, please read the paper.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-11 col-sm-10">
+            <div class="page-header">
+              <h1 id="tables">Feature visualisation</h1>
+            </div>
+            <embed src="heatmaps_cars.svg" width="100%" alt="image load failed!" style="display: block; margin: 0 auto;"/> <br/>
+            <p style="text-align: center;padding-left: 5%; padding-right: 5%" class="text-info">Visualisation of learned convolutional feature maps from Cars dataset with ResNeXt-101. From left: Input image,
+              GAP, iSQRT-COV (Covariance Matrix), Precision Matrix and iSICE. The colour in the heatmap ranges from blue to red, blue indicates cold and red indicates
+              hot. The feature maps suggest that with iSICE, the model focuses well on the key parts of car to extract features for classification. GAP
+              (global average pooling) overly focuses on entire foreground, iSQRT-COV focuses poorly, while iSICE lets us control the degree
+              of ‘focus’ by controlling sparsity.</p>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-11 col-sm-10">
+              <div class="page-header">
+                <h1 id="tables">Resources</h1>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-3 col-sm-2">
+              <div class="card text-white bg-danger mb-3" >
+                <div class="card-header">Main paper</div>
+                <div class="card-body">
+                  <h4 class="card-title">arXiv preprint</h4>
+                    <div class="d-grid gap-2">
+                      <a class="btn btn-lg btn-danger" href="https://arxiv.org/pdf/2304.11597.pdf" role="button">View PDF</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-3 col-sm-2">
+              <div class="card bg-warning mb-3" >
+                <div class="card-header">Source code</div>
+                <div class="card-body">
+                  <h4 class="card-title">Github Code repository</h4>
+                    <div class="d-grid gap-2">
+                      <a class="btn btn-lg btn-outline-dark" href="https://github.com/csiro-robotics/iSICE" role="button">View repository</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-3 col-sm-2">
+              <div class="card text-white bg-info mb-3" >
+                <div class="card-header">Poster</div>
+                <div class="card-body">
+                  <h4 class="card-title">Poster presentation</h4>
+                    <div class="d-grid gap-2">
+                      <a class="btn text-white btn-lg btn-outline-info" href="#" role="button">View PDF</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-12 col-md-11 col-sm-10">
+            <div class="page-header">
+              <h1 id="tables">Bibilography</h1>
+            </div>
+            <pre>
+@InProceedings{isice_cvpr,
+  author = {Rahman, Saimunur and Koniusz, Piotr and Wang, Lei and Zhou, Luping and Moghadam, Peyman and Sun, Changming},
+  title = {Learning Partial Correlation based Deep Visual Representation for Image Classification},
+  booktitle = {IEEE/CVF Int. Conf. on Computer Vision and Pattern Recognition (CVPR)},
+  month = {June},
+  year = {2023}
+}
+            </pre>
+          </div>
+        </div>
+        
+      </div>
+
+
+      <footer id="footer">
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Made by <a href="https://thomaspark.co/">Thomas Park</a>.</p>
+            <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/master/LICENSE">MIT License</a>.</p>
+            <p>Based on <a href="https://getbootstrap.com/" rel="nofollow">Bootstrap</a>. Icons from <a href="https://icons.getbootstrap.com/" rel="nofollow">Bootstrap Icons</a>. Web fonts from <a href="https://fonts.google.com/" rel="nofollow">Google</a>.</p>
+
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="index_files/bootstrap.bundle.min.js"></script>
+    <script src="index_files/prism.js" data-manual=""></script>
+    <script src="index_files/custom.js"></script>
+  
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
