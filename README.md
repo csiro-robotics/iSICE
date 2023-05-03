@@ -1,6 +1,6 @@
 ## Learning Partial Correlation based Deep Visual Representation for Image Classification<br><sub>Official implementation with PyTorch</sub>
 
-### ![Paper](#) | ![Project Website](https://csiro-robotics.github.io/iSICE/) 
+### ![Paper](#) | ![Project Website](https://csiro-robotics.github.io/iSICE) 
 ![iSICE](isice.png)
 This repository contains the model definitions, training/evaluation code and pre-trained model weights for our paper exploring partial correlation based deep SPD visual representation. More information are available on our [project website](#).
 
