@@ -22,44 +22,59 @@
       MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
     </script>
     <script type="text/javascript" async
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
 
   </head>
   <body data-new-gr-c-s-check-loaded="8.905.0" data-gr-ext-installed="">
     <div class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
       <div class="container">
-        <a href="https://bootswatch.com/" class="navbar-brand">iSICE</a>
+        <a href="https://csiro-robotics.github.io/iSICE" class="navbar-brand">iSICE</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Summary</a>
+              <a class="nav-link" href="#summary">Summary</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Framework</a>
+              <a class="nav-link" href="#framework">Framework</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#algorithm">Method</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#results">Results</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#resources">Download</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
           <ul class="navbar-nav ms-md-auto">
             <li class="nav-item">
-              <a target="_blank" rel="noopener" class="nav-link" href="#">CVPR'23</a>
+              <a target="_blank" rel="noopener" class="nav-link" href="https://cvpr2023.thecvf.com/">CVPR'23</a>
             </li>
             <li class="nav-item">
-              <a target="_blank" rel="noopener" class="nav-link" href="#">CSIRO Data61</a>
+              <a target="_blank" rel="noopener" class="nav-link" href="https://www.csiro.au/">CSIRO</a>
             </li>
             <li class="nav-item">
-              <a target="_blank" rel="noopener" class="nav-link" href="#">UOW</a>
+              <a target="_blank" rel="noopener" class="nav-link" href="https://www.uow.edu.au/">UOW</a>
             </li>
             <li class="nav-item">
-              <a target="_blank" rel="noopener" class="nav-link" href="#">ANU</a>
+              <a target="_blank" rel="noopener" class="nav-link" href="https://www.anu.edu.au/">ANU</a>
             </li>
             <li class="nav-item">
-              <a target="_blank" rel="noopener" class="nav-link" href="#">USYD</a>
+              <a target="_blank" rel="noopener" class="nav-link" href="https://www.sydney.edu.au/">USYD</a>
             </li>
             <li class="nav-item">
-              <a target="_blank" rel="noopener" class="nav-link" href="#">QUT</a>
+              <a target="_blank" rel="noopener" class="nav-link" href="https://www.qut.edu.au/">QUT</a>
             </li>
           </ul>
         </div>
@@ -89,16 +104,16 @@
         </div>
         <div class="row">
           <div class="col-lg-12 col-md-11 col-sm-10">
-            <div class="page-header">
-              <h1 id="tables">Proposed idea</h1>
+            <div class="page-header" id="summary">
+              <h1 id="tables" >Proposed idea</h1>
               <p class="lead">Visual representation based on covariance matrix has demonstrates its efficacy for image classification by characterising the pairwise correlation of different channels in convolutional feature maps. However, pairwise correlation will become misleading once there is another channel correlating with both channels of interest, resulting in the "confounding'' effect. For this case, "partial correlation'' which removes the confounding effect shall be estimated instead. Nevertheless, reliably estimating partial correlation requires to solve a symmetric positive definite matrix optimisation, known as sparse inverse covariance estimation (SICE). How to incorporate this process into CNN remains an open issue. In this work, we formulate SICE as a novel structured layer of CNN. To ensure end-to-end trainability, we develop an iterative method to solve the above matrix optimisation during forward and backward propagation steps. Our work obtains a partial correlation based deep visual representation and mitigates the small sample problem  often encountered by covariance matrix estimation in CNN. Computationally, our model can be effectively trained with GPU and works well with a large number of channels of advanced CNNs. Experiments show the efficacy and  superior classification performance of our deep visual representation compared to covariance matrix based counterparts.</p>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-12 col-md-11 col-sm-10">
-            <div class="page-header">
-              <h1 id="tables">Proposed framework</h1>
+            <div class="page-header" id="framework">
+              <h1 id="tables" >Proposed framework</h1>
             </div>
             <embed src="isice.svg" width="100%" alt="image load failed!" style="display: block; margin: 0 auto;"/> <br/>
             <p style="text-align: center;" class="text-info">Proposed iterative sparse inverse covariance estimation (iSICE) method in a CNN pipeline.</p>
@@ -106,8 +121,8 @@
         </div>
         <div class="row">
           <div class="col-lg-12 col-md-11 col-sm-10">
-            <div class="page-header">
-              <h1 id="tables">Proposed iSICE algorithm</h1>
+            <div class="page-header" id="algorithm">
+              <h1 id="tables" >Proposed iSICE algorithm</h1>
             </div>
             <embed src="algorithm.svg" width="100%" alt="image load failed!" style="display: block; margin: 0 auto;"/> <br/>
             <p style="text-align: center;" class="text-info">For explanation of notations and Algirithm 1, please read the paper.</p>
@@ -115,8 +130,8 @@
         </div>
         <div class="row">
           <div class="col-lg-12 col-md-11 col-sm-10">
-            <div class="page-header">
-              <h1 id="tables">Experimental results</h1>
+            <div class="page-header" id="results">
+              <h1 id="tables" >Experimental results</h1>
             </div>
             <embed src="results.svg" width="100%" alt="image load failed!" style="display: block; margin: 0 auto;"/> <br/>
             <p style="text-align: center;" class="text-info">For explanation of notations and Algirithm 1, please read the paper.</p>
@@ -136,7 +151,7 @@
           </div>
           <div class="row">
             <div class="col-lg-12 col-md-11 col-sm-10">
-              <div class="page-header">
+              <div class="page-header" id="resources">
                 <h1 id="tables">Resources</h1>
               </div>
             </div>
@@ -192,6 +207,15 @@
             </pre>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-lg-12 col-md-11 col-sm-10">
+            <div class="page-header" id="contact">
+              <h1 id="tables" >Contact</h1>
+            </div>
+            <p>For any questions please contact at saimun.rahman@data61.csiro.au.</p>
+          </div>
+        </div>
         
       </div>
 
@@ -199,8 +223,8 @@
       <footer id="footer">
         <div class="row">
           <div class="col-lg-12">
-            <p>Made by <a href="https://thomaspark.co/">Thomas Park</a>.</p>
-            <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/master/LICENSE">MIT License</a>.</p>
+            <p>Original theme was designed by <a href="https://thomaspark.co/">Thomas Park</a>.</p>
+            <p>Code released under the <a href="https://github.com/csiro-robotics/iSICE/blob/main/LICENCE">CSIRO Open Source Software Licence</a>.</p>
             <p>Based on <a href="https://getbootstrap.com/" rel="nofollow">Bootstrap</a>. Icons from <a href="https://icons.getbootstrap.com/" rel="nofollow">Bootstrap Icons</a>. Web fonts from <a href="https://fonts.google.com/" rel="nofollow">Google</a>.</p>
 
           </div>
