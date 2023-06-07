@@ -111,7 +111,7 @@ class SICE(nn.Module):
              mfLLT_prev = mfLLT*1.0
              mfLLT_prev = mfLLT_prev
          mfOut = mfLLT
-         mfOut = mfOut/torch.diagonal(mfOut, dim1=-2, dim2=-1).sum(-1).view(-1,1,1) 
+         mfOut = mfOut/torch.diagonal(self._cov_pool(mfX), dim1=-2, dim2=-1).sum(-1).view(-1,1,1) 
          return mfOut
     
      def _triuvec(self, x):
